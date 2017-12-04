@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clint Adventures</title>
+  <!-- link to icon for title -->
+    <link rel="icon" type="image/PNG" href="Images/icon.png">
+  <!-- Reference to my internal styling -->
+    <style>
+
+    /*styling body display grid template area;header,nav,article,ad,footer,grid-template row,grid-template-column,grid-gap,height,margin*/
+      body {
+            display: grid;
+            grid-template-areas:
+              "header header header"
+              "nav nav nav"
+              "article article article"
+              "footer footer footer";
+            grid-template-rows: 100px 1fr 700px;
+            grid-template-columns: 20% 1fr 15%;
+            grid-gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+      /*styling header,div;padding,background-image,background-position,background-repeat,background-size*/
+      header,div {
+                  padding: 20px;
+                  background-image: url(Images/body.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+
+      }
+      /*styling body background-colour*/
+      body{
+          background-color: #adabaa;
+      }
+      /*styling pageheader grid-area,background-image,background-size,background-position,background-repeat,height*/
+      #pageHeader {
+                    grid-area: header;
+                    background-image: url(Images/background.jpg);
+                    background-size: 100% 100%;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    height: 100px;
+      }
+      /*styling pagenav grid-area,height,list-style-type,background-color,display,text-align*/
+      #pageNav{
+              grid-area:nav;
+              height:60px;
+              list-style-type: none;
+              background-color:#22aed1;
+              display: inline-block;
+              text-align: center;
+      }
+      /*styling main article grid-area*/
+      #mainArticle {
+                  grid-area: article;
+        }
+
+        /*styling pagefooter grid-area,background-colour,background-position,background-repeat,background-size,margin-top*/
+      #pageFooter {
+                  grid-area: footer;
+                  background-color: #22aed1;
+                  background-position: bottom;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+
+      }
+      /*styling nav list display,text-align,font-size*/
+      nav li{
+              display: inline-block;
+              text-align: center;
+              font-size: 30px;
+      }
+      /*styling nav list anchor tag text-decoration,display,margin-left,colour*/
+      nav li a{
+                text-decoration: none;
+                display: block;
+                margin-left: 24mm;
+                color: white;
+      }
+      /*styling nav list anchor tag active background-colour*/
+      nav li a:active{
+                      background-color: red;
+
+      }
+      /*styling nav list anchor hover background-colour,colour*/
+      nav li a:hover{
+                    background-color: gray;
+                    color: black;
+      }
+      /*styling iframe padding-left*/
+      iframe{
+            padding-left: 5mm;
+      }
+      /*styling grid display grid-template-column,grid-template-row,grid-gap,padding-top*/
+        .grid{
+              width: 60%;
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: 1fr;
+              grid-gap: 1vw;
+              padding-top: 5px;
+              margin-left: 250px;
+        }
+
+        /*styling grid image border-radius*/
+        .grid img{
+                  border-radius: 30%;
+        }
+        /*styling input width,padding,margin,display,border,border-radius,box-sizing*/
+        input[type=text], select {
+                                  width: 100%;
+                                  padding: 12px 20px;
+                                  margin: 8px 0;
+                                  display: inline-block;
+                                  border: 1px solid #ccc;
+                                  border-radius: 4px;
+                                  box-sizing: border-box;
+        }
+        /*styling input submit width,background-color,color,padding,margin,border,border-radius,cursor*/
+        input[type=submit] {
+                          width: 100%;
+                          background-color: #4CAF50;
+                          color: white;
+                          padding: 14px 20px;
+                          margin: 8px 0;
+                          border: none;
+                          border-radius: 4px;
+                          cursor: pointer;
+        }
+        /*styling input hover background-color*/
+        input[type=submit]:hover {
+                                background-color: #45a049;
+        }
+        /*styling input reset width,background-colour,colour,padding,margin,border,border-radius,cursor*/
+        input[type=reset] {
+                          width: 100%;
+                          background-color: #4CAF50;
+                          color: white;
+                          padding: 14px 20px;
+                          margin: 8px 0;
+                          border: none;
+                          border-radius: 4px;
+                          cursor: pointer;
+        }
+        /*styling input reset hover background-color*/
+        input[type=reset]:hover{
+                              background-color: #45a049;
+        }
+        /*styling div border-radius,background-color,padding*/
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header for pageheader and h1  -->
+  <header id="pageHeader">
+    <h1 style="color:white; text-align:center;margin-top:0px;">Clint Adventures</h1>
+  </header>
+<!-- navigation for pagenav and anchor tags -->
+  <nav id="pageNav">
+    <ul>
+      <li><a href="Clint Adventures.html">Home</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="Contact.html">Contact us</a></li>
+    </ul>
+  </nav>
+
+<!-- article for main article and grid-->
+  <article id="mainArticle">
+  <!-- divider for grid  and contact form -->
+    <div class="grid" id="form">
+      <!-- form for contact information -->
+      <form>
+      <!-- label and input for first name -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <!-- label and input for Last name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <!-- label and selection for adventure of your choice -->
+        <label for="adventures">Adventure of your choice:</label>
+      <!-- dropdown list of the adventure you'd like -->
+              <select id="adventures" name="adventures">
+              <option value="Select an item">Select an adventure...</option>
+              <option value="Hiking">Hiking</option>
+              <option value="Fishing">Fishing</option>
+              <option value="Camping">Camping</option>
+              <option value="Rock Climbing">Rock Climbing</option>
+              </select>
+      <!-- label and input for email address -->
+        <label for="email">E-mail address:</label>
+        <input type="text" id="email" name="Email" placeholder="Your email address here...">
+      <!-- label and input for subject line  -->
+        <label for="subject">Subject line:</label>
+        <input type="text" id="subject" name="Subject" placeholder="Subject here">
+      <!-- label and textarea for message box  -->
+        <label for="message box">Message box:</label><br>
+        <textarea type="text" id="message box" name="message box" rows="8" cols="80" placeholder="Comment Here..."></textarea>
+      <!-- input for submit button -->
+        <input type="submit" value="Submit">
+      <!-- input for reset button -->
+        <input type="reset" value="Reset">
+      </form>
+
+      <p><i>Thank you for completing the form!</i></p>
+    </div>
+  </article>
+
+<!-- footer for my pagefooter with dummy links to social media sites and internal copyright styling -->
+  <footer id="pageFooter">
+
+    <a href="#"><img src="Images/facebook.png" alt="facebook" width="30" height="40"></a>
+
+    <a href="#"><img src="Images/Twitter.png"alt="twitter" width="30" height="40"></a>
+
+    <a href="#"><img src="Images/insta.png" alt="insta" width="30" height="40"></a>
+
+    <!-- inline styling:text colour,margin top, margin bottom -->
+    <p style="color:black;margin-top: 0px;margin-bottom: 0px;">&copy;Clint Adventures</p>
+  </footer>
+
+</body>
+</html>

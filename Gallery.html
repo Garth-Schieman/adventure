@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Clint Adventures</title>
+    <!-- link to icon for title -->
+    <link rel="icon" type="image/PNG" href="Images/icon.png">
+    <!-- Reference to my internal styling -->
+    <style>
+    /*styling body display grid template area;header,nav,article,ad,footer,grid-template row,grid-template-column,grid-gap,height,margin*/
+      body {
+          display: grid;
+          grid-template-areas:
+          "header header header"
+          "nav nav nav"
+          "article article article"
+          "footer footer footer";
+          grid-template-rows: 100px 1fr 400px;
+          grid-template-columns: 20% 1fr 15%;
+          grid-gap: 10px;
+          height: 100vh;
+          margin: 0;
+      }
+    /*styling header,div;padding,background-image,background-position,background-repeat,background-size*/
+      header,div {
+                  padding: 20px;
+                  background-image: url(Images/body.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+      }
+      /*styling body background-colour*/
+      body{
+          background-color: #adabaa;
+      }
+      /*styling pageheader grid-area,background-image,background-size,background-position,background-repeat,height*/
+      #pageHeader {
+                    grid-area: header;
+                    background-image: url(Images/background.jpg);
+                    background-size: 100% 100%;
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    height: 100px;
+      }
+      /*styling pagenav grid-area,height,list-style-type,background-color,display,text-align*/
+      #pageNav{
+              grid-area:nav;
+              height:60px;
+              list-style-type: none;
+              background-color:#22aed1;
+              display: inline-block;
+              text-align: center;
+      }
+      /*styling main article grid-area*/
+      #mainArticle {
+                  grid-area: article;
+                  /*width: 80%;*/
+        }
+
+      /*styling pagefooter grid-area,background-colour,background-position,background-repeat,background-size,margin-top*/
+      #pageFooter {
+                  grid-area: footer;
+                  background-color: #22aed1;
+                  background-position: bottom;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  margin-top:1170px;
+      }
+      /*styling nav list display,text-align,font-size*/
+      nav li{
+              display: inline-block;
+              text-align: center;
+              font-size: 30px;
+      }
+      /*styling nav list anchor tag text-decoration,display,margin-left,colour*/
+      nav li a{
+                text-decoration: none;
+                display: block;
+                margin-left: 24mm;
+                color: white;
+      }
+      /*styling nav list anchor tag active background-colour*/
+      nav li a:active{
+                      background-color: red;
+
+      }
+      /*styling nav list anchor hover background-colour,colour*/
+      nav li a:hover{
+                    background-color: gray;
+                    color: black;
+      }
+      /*styling iframe padding-left*/
+      iframe{
+            padding-left: 5mm;
+      }
+      /*styling grid display grid-template-column,grid-template-row,grid-gap,padding-top*/
+      .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 1vw;
+            padding-top: 5px;
+      }
+
+      /*styling grid image border-radius,border,transition*/
+      .grid img{
+                /*border-radius: 80%;*/
+                border: 2px solid #131414;
+                -webkit-transition: width 2s;
+                transition: width 1s;
+      }
+      /*styling grid image hover;width*/
+      .grid img:hover{
+                    width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header for pageheader and h1  -->
+    <header id="pageHeader">
+      <h1 style="color:white; text-align:center;margin-top:0px;">Clint Adventures</h1>
+    </header>
+    <!-- navigation for pagenav and anchor tags -->
+    <nav id="pageNav">
+      <ul>
+        <li><a href="Clint Adventures.html">Home</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+
+    <!-- article for main article and grid,""1,""2,""3,""4 -->
+    <article id="mainArticle">
+
+    <!-- divider for grid  gallery images -->
+      <div class="grid">
+
+        <div class="galleryImages">
+              <img src="Images/H.jpg" alt="Hiking" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+          <img src="Images/I.jpg" alt="Hiking" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+          <img src="Images/K.jpg" alt="Hiking" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+          <img src="Images/E.jpg" alt="Hiking" width="250" height="200">
+        </div>
+
+
+        <div class="galleryImages">
+              <img src="Images/F.jpg" alt="F" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/i (3).jpg" alt="i" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/s.jpg" alt="s" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/h2.jpg" alt="h" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/c.jpg" alt="c" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/a.jpg" alt="a" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/m.JPG" alt="m" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/p.jpg" alt="p" width="250" height="200">
+        </div>
+
+
+        <div class="galleryImages">
+              <img src="Images/r.jpg" alt="r" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/o.jpg" alt="o" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/C1.jpg" alt="c" width="250" height="200">
+        </div>
+
+        <div class="galleryImages">
+              <img src="Images/K1.jpg" alt="k" width="250" height="200">
+        </div>
+      </div>
+    </article>
+
+    <!-- footer for my pagefooter with dummy links to social media sites and internal copyright styling -->
+    <footer id="pageFooter">
+
+      <a href="#"><img src="Images/facebook.png" alt="facebook" width="30" height="40"></a>
+      <a href="#"><img src="Images/Twitter.png"alt="twitter" width="30" height="40"></a>
+      <a href="#"><img src="Images/insta.png" alt="insta" width="30" height="40"></a>
+      <!-- inline styling:text colour,margin top, margin bottom -->
+      <p style="color:black;margin-top: 0px;margin-bottom: 0px;">&copy;Clint Adventures</p>
+    </footer>
+  </body>
+</html>
